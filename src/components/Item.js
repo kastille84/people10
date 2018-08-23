@@ -40,11 +40,15 @@ class Item extends Component {
                         </div>
                     </div>
                 </td>
-                <td className="Item__size size_col">{this.props.item.size}</td>
+                <td className="Item__size size_col">
+                    <p className="heading">{this.props.item.size}</p>
+                </td>
                 <td className="Item__qty qty_col">
                     <input type="text" maxLength="2" value={this.props.item.quantity}></input>
                 </td>
-                <td className="Item__price price_col">{this.props.item.price}</td>
+                <td className="Item__price price_col">
+                    <p>{this.props.item.price}</p>
+                </td>
                 
             </tr>
         )

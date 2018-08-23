@@ -40,3 +40,15 @@
     margin-right: 5px;
     margin-left: 5px;
 }
+
+.Item__size p, .Item__price p {
+    position: relative;
+    top:-50px;
+    left:10px;
+}
+
+.Item__qty input {
+    position: relative;
+    top:-55px;
+    left:10px;
+}

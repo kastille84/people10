@@ -5,10 +5,12 @@
 
 .item_col {
     text-align: left;
+    width: 70%;
 }
 
 .size_col {
     text-align:left;
+    width: 7%;
 }
 
 .qty_col {
