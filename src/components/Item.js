@@ -7,8 +7,14 @@ import './Item.css';
 class Item extends Component {
 
     removeItem = (e) => {
-        e.preventDefault()
+        e.preventDefault();
         this.props.onDeleteItem(this.props.item.id);
+    }
+
+    editItem = (e) => {
+        e.preventDefault();
+        this.props.onSetEditItemMode(true);
+        this.props.onSetSelectedItem(this.props.item);
     }
 
 
@@ -26,7 +32,7 @@ class Item extends Component {
                         <p>Color: {this.props.item.color}</p>
 
                         <div className="Item__controls">
-                            <a href="#">EDIT</a> |
+                            <a href="#" onClick={this.editItem}>EDIT</a> |
                             <a href="#" onClick={this.removeItem}>X REMOVE</a> |
                             <a href="#">SAVE FOR LATER</a> 
                         </div>
@@ -45,7 +51,9 @@ class Item extends Component {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        onDeleteItem: (id) => dispatch(actions.deleteItem(id))
+        onDeleteItem: (id) => dispatch(actions.deleteItem(id)),
+        onSetEditItemMode: (bool) => dispatch(actions.setEditItemMode(bool)),
+        onSetSelectedItem: (item) => dispatch(actions.setSelectedItem(item))
     }
 }
 

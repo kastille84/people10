@@ -1,3 +1,5 @@
 export {
-    deleteItem
+    deleteItem,
+    setEditItemMode,
+    setSelectedItem
 } from './item';

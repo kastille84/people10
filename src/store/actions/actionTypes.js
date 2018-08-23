@@ -1,1 +1,3 @@
 export const DELETE_ITEM = 'DELETE_ITEM';
+export const SET_EDIT_ITEM_MODE = 'SET_EDIT_ITEM_MODE';
+export const SET_SELECTED_ITEM = 'SET_SELECTED_ITEM';

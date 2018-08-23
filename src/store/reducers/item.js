@@ -10,7 +10,7 @@ const initialItems = [
 const initialState = {
     items: initialItems, 
     selectedItem: null,
-    editItem: false
+    editItemMode: false
 }
 
 const reducer = (state=initialState, action) => {
@@ -23,7 +23,16 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 items: newItems
             }
-
+        case (actionTypes.SET_EDIT_ITEM_MODE):
+            return {
+                ...state,
+                editItemMode: action.bool
+            }
+        case (actionTypes.SET_SELECTED_ITEM):
+            return {
+                ...state,
+                selectedItem: action.item
+            }
         default:
             return state; 
     }
