@@ -1,17 +1,14 @@
-.Items {
-
+.item_col {
+    text-align: left;
 }
 
-.Items__header {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 2px solid #ccc;
+.size_col {
+    text-align:left;
 }
 
-.Items__header p {
-
+.qty_col {
+    text-align:left;
 }
-
-.Items__body {
-    
+.qty_col input {
+    width: 20%
 }

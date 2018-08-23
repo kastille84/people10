@@ -21,8 +21,8 @@ class Item extends Component {
     render() {
 
         return (
-            <div className="Item">
-                <div className="Item__info">
+            <tr className="Item">
+                <td className="Item__info item_col">
                     <figure className="Item__img-box">
                         <img className="Item__img" src={this.props.item.imgUrl} alt="t-shirt pic" />
                     </figure>
@@ -37,14 +37,14 @@ class Item extends Component {
                             <a href="#">SAVE FOR LATER</a> 
                         </div>
                     </div>
-                </div>
-                <div className="Item__size">{this.props.item.size}</div>
-                <div className="Item__qty">
-                    <input type="text" length="2" value={this.props.item.quantity}></input>
-                </div>
-                <div className="Item__price">{this.props.item.price}</div>
+                </td>
+                <td className="Item__size size_col">{this.props.item.size}</td>
+                <td className="Item__qty qty_col">
+                    <input type="text" maxLength="2" value={this.props.item.quantity}></input>
+                </td>
+                <td className="Item__price price_col">{this.props.item.price}</td>
                 
-            </div>
+            </tr>
         )
     }
 }

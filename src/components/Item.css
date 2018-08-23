@@ -1,7 +1,7 @@
 .Item {
-    display: flex;
+    /* display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #ccc; */
 }
 
 .Item__info {

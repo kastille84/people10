@@ -30,3 +30,7 @@
 .App {
   position: relative;
 }
+
+.section-checkout {
+  display: flex;
+}
