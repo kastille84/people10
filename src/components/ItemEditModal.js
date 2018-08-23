@@ -5,9 +5,29 @@ import * as actions from '../store/actions/index.js';
 import './ItemEditModal.css';
 
 class ItemEditModal extends Component {
+
+    state = {
+        size: this.props.itemRedux.selectedItem.size,
+        color: this.props.itemRedux.selectedItem.color,
+        quantity: this.props.itemRedux.selectedItem.quantity,
+    }
+
     onUnselectItemFunc = () => {
         this.props.onSetSelectedItem(null);
         this.props.onSetEditItemMode(false);
+    }
+
+    onQuantityChange = (e) => {
+        //validation required
+        this.setState({quantity: e.target.value})
+    }
+
+    onSelectChange = (e) => {
+        this.setState({size: e.target.value})
+    }
+
+    onColorChange = (newColor) => {
+        this.setState({color: newColor})
     }
 
     render() {
@@ -20,15 +40,23 @@ class ItemEditModal extends Component {
                     <h3>{this.props.itemRedux.selectedItem.name}</h3>
                     <p>{this.props.itemRedux.selectedItem.price}</p>
                     <p>{this.props.itemRedux.selectedItem.styleNum}</p>
-                    <p>color selector here</p>
+                    <p>
+                        <span onClick={()=> {this.onColorChange('red')}}>red</span> 
+                        <span onClick={()=> {this.onColorChange('green')}}>green</span> 
+                        <span onClick={()=> {this.onColorChange('blue')}}>blue</span>
+                    </p>
                     <p>Color: {this.props.itemRedux.selectedItem.color}</p>
                     <form>
-                        <select>
-                            <option>small</option>
-                            <option>medium</option>
-                            <option>large</option>
+                        <select onChange={this.onSelectChange}>
+                            <option value="s">small</option>
+                            <option value="m">medium</option>
+                            <option value="l">large</option>
                         </select>
-                        <input type="number" value={this.props.itemRedux.selectedItem.quantity} />
+                        <input 
+                            type="number" 
+                            defaultValue={this.props.itemRedux.selectedItem.quantity}
+                            onChange={this.onQuantityChange}    
+                        />
                         <button>EDIT</button>
                     </form>
                     <a href="#">Check product details</a>
