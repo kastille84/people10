@@ -1,0 +1,17 @@
+.Items {
+
+}
+
+.Items__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+}
+
+.Items__header p {
+
+}
+
+.Items__body {
+    
+}

@@ -1,0 +1,21 @@
+.Item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #ccc;
+}
+
+.Item__info {
+
+}
+
+.Item__img-box {
+    width: 15%;
+    float: left;
+}
+
+.Item__img {
+    width: 100%;
+}
+
+.Item__stat {
+}

@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 
 import Item from '../../components/Item';
 
+import './Items.css';
+
 class Items extends Component {
 
     render() {
         return (
             <div className="Items">
                 <div className="Items__header">
-                    <p>4 ITEMS</p>
+                    <p>{this.props.itemRedux.items.length} ITEMS</p>
                     <p>SIZE</p>
                     <p>QTY</p>
                     <p>PRICE</p>
