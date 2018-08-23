@@ -3,6 +3,12 @@ import { connect } from 'react-redux';
 
 class CheckoutArea extends Component {
 
+    componentDidMount() {
+        // set the subtotal based on how many items there are and quantity
+
+        
+    }
+
     render() {
         return (
             <div>

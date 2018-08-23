@@ -4,7 +4,7 @@ const initialState = {
     setPromoCode: false,
     promoCode: '',
     promoCodeValue: 5,
-    subtotal: 71
+    subtotal: 0
 }
 
 const reducer = (state=initialState, action) => {
