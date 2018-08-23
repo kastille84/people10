@@ -33,6 +33,21 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 selectedItem: action.item
             }
+        case (actionTypes.SET_EDIT_SELECTED_ITEM):
+        
+            return {
+                ...state,
+                items: state.items.map(item => {
+                    if (item.id === action.editInfo.id ) {
+                        item.color = action.editInfo.color;
+                        item.size = action.editInfo.size;
+                        item.quantity = action.editInfo.quantity;
+                        return item;
+                    } else {
+                        return item;
+                    }
+                })
+            }
         default:
             return state; 
     }

@@ -7,6 +7,7 @@ import './ItemEditModal.css';
 class ItemEditModal extends Component {
 
     state = {
+        id: this.props.itemRedux.selectedItem.id,
         size: this.props.itemRedux.selectedItem.size,
         color: this.props.itemRedux.selectedItem.color,
         quantity: this.props.itemRedux.selectedItem.quantity,
@@ -30,6 +31,11 @@ class ItemEditModal extends Component {
         this.setState({color: newColor})
     }
 
+    onSubmitForm = (e) => {
+        e.preventDefault();
+        this.props.onSetEditSelectedItem(this.state);
+    }
+
     render() {
         return (    
             <div className={"ItemEdit " + (this.props.itemRedux.editItemMode ? 'showModal': '')}>
@@ -45,8 +51,8 @@ class ItemEditModal extends Component {
                         <span onClick={()=> {this.onColorChange('green')}}>green</span> 
                         <span onClick={()=> {this.onColorChange('blue')}}>blue</span>
                     </p>
-                    <p>Color: {this.props.itemRedux.selectedItem.color}</p>
-                    <form>
+                    <p>Color: {this.state.color}</p>
+                    <form onSubmit={this.onSubmitForm}>
                         <select onChange={this.onSelectChange}>
                             <option value="s">small</option>
                             <option value="m">medium</option>
@@ -78,7 +84,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         onSetSelectedItem: (bool) => dispatch(actions.setSelectedItem(bool)),
-        onSetEditItemMode: (bool) => dispatch(actions.setEditItemMode(bool))
+        onSetEditItemMode: (bool) => dispatch(actions.setEditItemMode(bool)),
+        onSetEditSelectedItem: (itemInfo) => dispatch(actions.setEditSelectedItem(itemInfo))
     }
 }
 

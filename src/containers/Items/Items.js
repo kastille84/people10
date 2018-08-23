@@ -6,6 +6,7 @@ import Item from '../../components/Item';
 import './Items.css';
 
 class Items extends Component {
+    
 
     render() {
         return (

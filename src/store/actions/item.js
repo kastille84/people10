@@ -20,3 +20,10 @@ export const setSelectedItem = (item) => {
         item: item
     }
 }
+
+export const setEditSelectedItem = (editInfo) => {
+    return {
+        type: actionTypes.SET_EDIT_SELECTED_ITEM,
+        editInfo: editInfo
+    }
+}
