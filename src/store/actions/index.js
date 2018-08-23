@@ -4,3 +4,7 @@ export {
     setSelectedItem,
     setEditSelectedItem
 } from './item';
+
+export {
+    setSubtractItemPrice
+} from './price';

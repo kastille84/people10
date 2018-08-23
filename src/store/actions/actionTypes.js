@@ -1,4 +1,8 @@
+// items
 export const DELETE_ITEM = 'DELETE_ITEM';
 export const SET_EDIT_ITEM_MODE = 'SET_EDIT_ITEM_MODE';
 export const SET_SELECTED_ITEM = 'SET_SELECTED_ITEM';
 export const SET_EDIT_SELECTED_ITEM = 'SET_EDIT_SELECTED_ITEM';
+
+// price
+export const SET_SUBTRACT_ITEM_PRICE = 'SET_SUBTRACT_ITEM_PRICE';

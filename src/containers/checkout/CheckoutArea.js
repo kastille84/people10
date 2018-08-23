@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import { connect } from 'react-redux';
 
 class CheckoutArea extends Component {
 
@@ -21,8 +21,8 @@ class CheckoutArea extends Component {
                         <small>You qualify for free shippingecause your order is over $50</small>                     
                     </div>
                     <div>
-                        <p>59</p>
-                        <p>5.90</p>
+                        <p>{this.props.priceRedux.subtotal}</p>
+                        <p>{this.props.priceRedux.promoCodeValue}</p>
                         <p>FREE</p>
                     </div>
                 </article>
@@ -32,7 +32,7 @@ class CheckoutArea extends Component {
                         <small>Tax will be applied during checkout</small>
                     </div>
                     <div>
-                        <p>53.10</p>
+                        <p>{this.props.priceRedux.subtotal - this.props.priceRedux.promoCodeValue}</p>
                     </div>
                 </article>
                 <article className="checkout">
@@ -45,4 +45,10 @@ class CheckoutArea extends Component {
     }
 }
 
-export default CheckoutArea;
+const mapStateToProps = (state) => {
+    return {
+        priceRedux: state.priceRedux
+    }
+}
+
+export default connect(mapStateToProps)(CheckoutArea);

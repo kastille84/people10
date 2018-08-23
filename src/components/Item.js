@@ -9,6 +9,8 @@ class Item extends Component {
     removeItem = (e) => {
         e.preventDefault();
         this.props.onDeleteItem(this.props.item.id);
+
+        this.props.onSetSubtractItemPrice(this.props.item.price);
     }
 
     editItem = (e) => {
@@ -53,7 +55,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onDeleteItem: (id) => dispatch(actions.deleteItem(id)),
         onSetEditItemMode: (bool) => dispatch(actions.setEditItemMode(bool)),
-        onSetSelectedItem: (item) => dispatch(actions.setSelectedItem(item))
+        onSetSelectedItem: (item) => dispatch(actions.setSelectedItem(item)),
+
+        onSetSubtractItemPrice: (price) => dispatch(actions.setSubtractItemPrice(price))
     }
 }
 

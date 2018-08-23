@@ -9,10 +9,12 @@ import {Provider} from 'react-redux';
 
 //reducers
 import itemReducer from './store/reducers/item';
+import priceReducer from './store/reducers/price';
 
 // import registerServiceWorker from './registerServiceWorker';
 const rootReducer = combineReducers({
-    itemRedux: itemReducer
+    itemRedux: itemReducer,
+    priceRedux: priceReducer
 });
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer, composeEnhancers(
