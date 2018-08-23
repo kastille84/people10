@@ -14,6 +14,11 @@ const reducer = (state=initialState, action) => {
                 ...state,
                 subtotal: state.subtotal - action.price
             }
+        case(actionTypes.SET_SUBTOTAL_PRICE):
+            return {
+                ...state,
+                subtotal: action.subtotal
+            }
         default: 
             return state;
     }

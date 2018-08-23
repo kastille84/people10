@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import * as actions from '../../store/actions/index.js';
 
 class CheckoutArea extends Component {
 
     componentDidMount() {
         // set the subtotal based on how many items there are and quantity
-
+        let subtotal = 0;
+        this.props.itemRedux.items.forEach(item => {
+            subtotal = subtotal + (item.price * item.quantity)
+        });
         
+        this.props.onSetSubtotalPrice(subtotal);
     }
 
     render() {
@@ -53,8 +58,15 @@ class CheckoutArea extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        priceRedux: state.priceRedux
+        priceRedux: state.priceRedux,
+        itemRedux: state.itemRedux
     }
 }
 
-export default connect(mapStateToProps)(CheckoutArea);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSetSubtotalPrice: (subtotal) => dispatch(actions.setSubtotalPrice(subtotal))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CheckoutArea);

@@ -6,3 +6,10 @@ export const setSubtractItemPrice = (price) => {
         price: price
     }
 }
+
+export const setSubtotalPrice = (subtotal) => {
+    return {
+        type: actionTypes.SET_SUBTOTAL_PRICE,
+        subtotal: subtotal
+    }
+}

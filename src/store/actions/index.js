@@ -6,5 +6,6 @@ export {
 } from './item';
 
 export {
-    setSubtractItemPrice
+    setSubtractItemPrice,
+    setSubtotalPrice
 } from './price';

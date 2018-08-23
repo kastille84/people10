@@ -2,6 +2,7 @@
     /* display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #ccc; */
+    padding-top: 20px;
 }
 
 .Item__info {
@@ -11,6 +12,7 @@
 .Item__img-box {
     width: 15%;
     float: left;
+    margin-top: 15px;
 }
 
 .Item__img {
@@ -18,4 +20,23 @@
 }
 
 .Item__stat {
+    margin-top: 15px;
+}
+
+.Item__stat p {
+    margin-bottom: 0;
+}
+
+.Item__controls {
+    margin-top: 25px;
+    font-size: 14px;
+}
+
+.Item__controls a {
+    color: #333;
+}
+
+.Item__controls a:not(:first-child) {
+    margin-right: 5px;
+    margin-left: 5px;
 }

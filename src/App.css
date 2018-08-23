@@ -29,8 +29,21 @@
 
 .App {
   position: relative;
+  padding: 10px;
+  /* background: red; */
+  font-family: 'Roboto', sans-serif;
+  color: #777;
 }
 
 .section-checkout {
   display: flex;
+}
+
+/* Utilities */
+.heading {
+  color: #444;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #ddd;
 }

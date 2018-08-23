@@ -23,7 +23,7 @@ class Item extends Component {
     render() {
 
         return (
-            <tr className="Item">
+            <tr className="Item border-bottom">
                 <td className="Item__info item_col">
                     <figure className="Item__img-box">
                         <img className="Item__img" src={this.props.item.imgUrl} alt="t-shirt pic" />
