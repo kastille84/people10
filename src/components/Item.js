@@ -30,7 +30,7 @@ class Item extends Component {
                     <div className="Item__stat">
                         <h3>{this.props.item.name}</h3>
                         <p>Style #: {this.props.item.styleNum}</p>
-                        <p>Color: {this.props.item.color}</p>
+                        <p>Color: <span style={{fontWeight: 'bold'}}>{this.props.item.color}</span></p>
 
                         <div className="Item__controls">
                             <a href="#" onClick={this.editItem}>EDIT</a> |
@@ -46,7 +46,7 @@ class Item extends Component {
                     <input type="text" maxLength="2" value={this.props.item.quantity}></input>
                 </td>
                 <td className="Item__price price_col">
-                    <p>$ {this.props.item.price}</p>
+                    <h2>$ {this.props.item.price.toFixed(2)}</h2>
                 </td>
                 
             </tr>

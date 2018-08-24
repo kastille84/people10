@@ -20,9 +20,9 @@ class CheckoutArea extends Component {
         return (
             <div className="Checkout">
                 <article className="Checkout__promotion">
-                    <div><p>ENTER PROMOTION CODE OR GIFT CARD</p></div>
-                    <div>
-                        <input />
+                    <div><p>ENTER PROMOTION CODE OR GIFT <br/>CARD</p></div>
+                    <div className="Checkout__promotion-input">
+                        <input type="text" value="AJ10P"/>
                         <button className="btn">APPLY</button>    
                     </div>
                 </article>
@@ -30,12 +30,12 @@ class CheckoutArea extends Component {
                     <div>
                         <p>SUB TOTAL</p>
                         <p>PROMOTION CODE AJ10P APPLIED</p>
-                        <p>ESTIMATED SHIPPING*</p>   
+                        <p style={{marginBottom: "-6px"}}>ESTIMATED SHIPPING*</p>   
                         <small>You qualify for free shippingecause your order is over $50</small>                     
                     </div>
                     <div>
-                        <p>$ {this.props.priceRedux.subtotal}</p>
-                        <p>$ {this.props.priceRedux.promoCodeValue}</p>
+                        <h2>$ {this.props.priceRedux.subtotal.toFixed(2)}</h2>
+                        <h2>$ {this.props.priceRedux.promoCodeValue.toFixed(2)}</h2>
                         <p>FREE</p>
                     </div>
                 </article>
@@ -45,11 +45,11 @@ class CheckoutArea extends Component {
                         <small>Tax will be applied during checkout</small>
                     </div>
                     <div>
-                        <p>$ {this.props.priceRedux.subtotal - this.props.priceRedux.promoCodeValue}</p>
+                        <h2>$ {(this.props.priceRedux.subtotal - this.props.priceRedux.promoCodeValue).toFixed(2)}</h2>
                     </div>
                 </article>
                 <article className="checkout-cta">
-                    <a>Continue Shopping</a>
+                    <a href="#">Continue Shopping</a>
                     <button className="btn btn-primary">CHECKOUT</button>
                     <p>Secure checkout. Shopping is always safe & secure</p>
                 </article>

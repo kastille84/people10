@@ -39,7 +39,7 @@
 .section-checkout {
   display: flex;
   justify-content: space-between;
-  border-top: 5px solid #ddd;
+  border-top: 8px solid #ddd;
   padding-top: 25px;
 }
 
@@ -70,6 +70,10 @@
 .btn {
   padding: 5px 40px;
   border:none;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
 
 .btn-primary {

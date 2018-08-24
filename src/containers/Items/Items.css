@@ -19,3 +19,7 @@
 .qty_col input {
     width: 20%
 }
+
+.price_col {
+    text-align: center;
+}

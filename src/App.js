@@ -15,10 +15,10 @@ class App extends Component {
         <Items></Items>
         <section className="section-checkout">
           <div className="questions">
-            <p>Need help or have questions?</p>
+            <h4>Need help or have questions?</h4>
             <p>Call Customer Service at <br/> 1-800-555-555</p>
-            <p><a>Chat with one of our stylists</a></p>
-            <p><a>See return or exchange policy</a></p>
+            <p><a style={{textDecoration:'underline'}}>Chat with one of our stylists</a></p>
+            <p><a style={{textDecoration:'underline'}}>See return or exchange policy</a></p>
           </div>
           <CheckoutArea></CheckoutArea>
         </section>

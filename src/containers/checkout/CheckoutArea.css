@@ -14,11 +14,25 @@
     border-bottom: 2px solid #ddd;
 }
 
+.Checkout__promotion-input input{
+    margin-right: 5px;
+    padding: 3px;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+}
+
+.Checkout__promotion-input button {
+    background: white;
+    border: 2px solid #ddd;
+    padding: 5px 20px;
+}
+
 .Checkout__subtotal {
     margin-top: 20px;
     padding-bottom: 20px;
     border-bottom: 2px solid #ddd;
 }
+
 
 .Checkout__total {
     margin-top: 20px;
@@ -33,4 +47,11 @@
 
 .checkout-cta button {
     margin-left: 20px;
+    padding: 10px 40px;
+}
+
+.checkout-cta a {
+    text-decoration:underline;
+    color: #777;
+    text-transform: uppercase;
 }
