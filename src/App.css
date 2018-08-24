@@ -50,3 +50,13 @@
 .border-bottom {
   border-bottom: 1px solid #ddd;
 }
+
+.btn {
+  padding: 5px 40px;
+  border:none;
+}
+
+.btn-primary {
+  background: blue;
+  color: white;
+}

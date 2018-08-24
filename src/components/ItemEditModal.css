@@ -1,5 +1,12 @@
 .ItemEdit {
+    background: yellow;
+    padding: 5px 10px;
+    width: 40%;
+}
+
+.ItemEdit__container {
     display: flex;
+    justify-content: space-between;
 }
 
 .showModal {
@@ -15,4 +22,53 @@
 
 .ItemEdit__img img {
     width: 100%;
+}
+
+.ItemEdit__close {
+    text-align: right;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ItemEdit__info {
+    border-top: 5px solid #777;
+    width: 40%;
+    text-align: center;
+    padding-top: 10px
+}
+
+.ItemEdit__info form {
+
+}
+
+.ItemEdit__info input {
+    width: 20%;
+    margin-left: 5px;
+}
+
+.ItemEdit__info select {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.ItemEdit__control-color--red,
+.ItemEdit__control-color--green,
+.ItemEdit__control-color--blue
+ {
+    display:inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.ItemEdit__control-color--red {
+    background-color: red;
+}
+.ItemEdit__control-color--green {
+    background-color: green;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.ItemEdit__control-color--blue {
+    background-color: blue;
 }

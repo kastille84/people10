@@ -40,35 +40,48 @@ class ItemEditModal extends Component {
         return (    
             <div className={"ItemEdit " + (this.props.itemRedux.editItemMode ? 'showModal': '')}>
                 <div className="ItemEdit__close">
-                    <span onClick={this.onUnselectItemFunc}>X</span>
+                    <span onClick={this.onUnselectItemFunc}>x</span>
                 </div>
-                <div className="ItemEdit__info">
-                    <h3>{this.props.itemRedux.selectedItem.name}</h3>
-                    <p>{this.props.itemRedux.selectedItem.price}</p>
-                    <p>{this.props.itemRedux.selectedItem.styleNum}</p>
-                    <p>
-                        <span onClick={()=> {this.onColorChange('red')}}>red</span> 
-                        <span onClick={()=> {this.onColorChange('green')}}>green</span> 
-                        <span onClick={()=> {this.onColorChange('blue')}}>blue</span>
-                    </p>
-                    <p>Color: {this.state.color}</p>
-                    <form onSubmit={this.onSubmitForm}>
-                        <select onChange={this.onSelectChange}>
-                            <option value="s">small</option>
-                            <option value="m">medium</option>
-                            <option value="l">large</option>
-                        </select>
-                        <input 
-                            type="number" 
-                            defaultValue={this.props.itemRedux.selectedItem.quantity}
-                            onChange={this.onQuantityChange}    
-                        />
-                        <button>EDIT</button>
-                    </form>
-                    <a href="#">Check product details</a>
-                </div>
-                <div className="ItemEdit__img">
-                    <img src={this.props.itemRedux.selectedItem.imgUrl} alt="shirt pic" />
+                <div className="ItemEdit__container">
+                    <div className="ItemEdit__info">
+                        <h4>{this.props.itemRedux.selectedItem.name}</h4>
+                        <h3>$ {this.props.itemRedux.selectedItem.price}</h3>
+                        <p>{this.props.itemRedux.selectedItem.styleNum}</p>
+                        <p className="ItemEdit__control-color">
+                            <span 
+                                className="ItemEdit__control-color--red" 
+                                onClick={()=> {this.onColorChange('red')}}>                                
+                            </span> 
+                            <span 
+                                className="ItemEdit__control-color--green" 
+                                onClick={()=> {this.onColorChange('green')}}>
+                            </span> 
+                            <span 
+                                className="ItemEdit__control-color--blue" 
+                                onClick={()=> {this.onColorChange('blue')}}>
+                            </span>
+                        </p>
+                        <p>Color: {this.state.color}</p>
+                        <form onSubmit={this.onSubmitForm}>
+                            <select onChange={this.onSelectChange}>
+                                <option value="S">small</option>
+                                <option value="M">medium</option>
+                                <option value="L">large</option>
+                            </select>
+                            <input 
+                                type="number" 
+                                maxLength="2" 
+                                defaultValue={this.props.itemRedux.selectedItem.quantity}
+                                onChange={this.onQuantityChange}    
+                            /><br/>
+                            <button className="btn btn-primary">EDIT</button>
+                        </form>
+                        <a href="#">Check product details</a>
+                    </div>
+                    <div className="ItemEdit__img">
+                        <img src={this.props.itemRedux.selectedItem.imgUrl} alt="shirt pic" />
+                    </div>
+                
                 </div>
             </div>
         );
