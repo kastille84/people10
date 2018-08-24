@@ -55,7 +55,7 @@ class ItemEditModal extends Component {
                 <div className="ItemEdit__container">
                     <div className="ItemEdit__info">
                         <h4>{this.props.itemRedux.selectedItem.name}</h4>
-                        <h2>$ {this.props.itemRedux.selectedItem.price}</h2>
+                        <h2>$ {this.props.itemRedux.selectedItem.price.toFixed(2)}</h2>
                         <p className="ItemEdit__styleNum">{this.props.itemRedux.selectedItem.styleNum}</p>
                         <p className="ItemEdit__control-color">
                             <span 
@@ -84,9 +84,9 @@ class ItemEditModal extends Component {
                                 defaultValue={this.props.itemRedux.selectedItem.quantity}
                                 onChange={this.onQuantityChange}    
                             /><br/>
-                            <button className="btn btn-primary">EDIT</button>
+                            <button className="btn btn-primary" style={{marginBottom: "10px"}}>EDIT</button>
                         </form>
-                        <a href="#">Check product details</a>
+                        <a href="#" style={{textDecoration: 'underline', color: 'inherit'}}>Check product details</a>
                     </div>
                     <div className="ItemEdit__img">
                         <img src={this.props.itemRedux.selectedItem.imgUrl} alt="shirt pic" />
