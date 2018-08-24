@@ -23,6 +23,7 @@ class App extends Component {
           <CheckoutArea></CheckoutArea>
         </section>
         {this.props.itemRedux.selectedItem? <ItemEditModal />: ''}
+        <div className={"backdrop " + (this.props.itemRedux.editItemMode? 'backdrop--after': '')}></div>
       </div>
     );
   }

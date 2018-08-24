@@ -1,7 +1,9 @@
 .ItemEdit {
-    background: yellow;
+    background: white;
     padding: 5px 10px;
     width: 40%;
+    z-index: 3;
+    border-radius: 5px;
 }
 
 .ItemEdit__container {
