@@ -1,0 +1,11 @@
+.Checkout {
+    width: 60%;
+    
+}
+
+.Checkout__promotion,
+.Checkout__subtotal,
+.Checkout__total {
+    display: flex;
+    justify-content: space-between;
+}

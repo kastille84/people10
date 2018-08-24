@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index.js';
 
+import './CheckoutArea.css';
+
 class CheckoutArea extends Component {
 
     componentDidMount() {
@@ -16,15 +18,15 @@ class CheckoutArea extends Component {
 
     render() {
         return (
-            <div>
-                <article className="promotion">
+            <div className="Checkout">
+                <article className="Checkout__promotion">
                     <div><p>ENTER PROMOTION CODE OR GIFT CARD</p></div>
                     <div>
                         <input />
                         <button>APPLY</button>    
                     </div>
                 </article>
-                <article className="subtotal">
+                <article className="Checkout__subtotal">
                     <div>
                         <p>SUB TOTAL</p>
                         <p>PROMOTION CODE AJ10P APPLIED</p>
@@ -37,7 +39,7 @@ class CheckoutArea extends Component {
                         <p>FREE</p>
                     </div>
                 </article>
-                <article className="total">
+                <article className="Checkout__total">
                     <div>
                         <h1>ESTIMATED TOTAL</h1>
                         <small>Tax will be applied during checkout</small>

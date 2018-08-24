@@ -37,6 +37,9 @@
 
 .section-checkout {
   display: flex;
+  justify-content: space-between;
+  border-top: 5px solid #ddd;
+  padding-top: 25px;
 }
 
 /* Utilities */
