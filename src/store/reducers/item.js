@@ -1,10 +1,10 @@
 import * as actionTypes from '../actions/actionTypes';
 
 const initialItems = [
-    {id: 1, name: 'Polo Shirt', imgUrl: 'https://images.sportsdirect.com/images/products/54202501_l.jpg', styleNum: 'MS13KT1906', color: 'blue', size: 'S', quantity: 1, price: 11 },
-    {id: 2, name: 'Graphic Shirt', imgUrl: 'https://cdn.shopify.com/s/files/1/2250/2843/products/mockup-d28bd8b0_grande.jpg', styleNum: 'MS13KT1906', color: 'pink', size: 'S', quantity: 1, price: 17 },
-    {id: 3, name: 'V-Neck', imgUrl: 'https://shirtsofcotton.com/en/media/catalog/product/cache/10/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/h/shirtsofcotton-t-shirt-soc-12-front-1200px.jpg', styleNum: 'MS13KT1906', color: 'blue', size: 'S', quantity: 1, price: 21 },
-    {id: 4, name: 'Tank Top', imgUrl: 'http://cdn.shopify.com/s/files/1/1347/4217/products/BonJovi-MoonTank-Womens-Main_grande.jpg', styleNum: 'MS13KT1906', color: 'red', size: 'M', quantity: 1, price: 22 },
+    {id: 1, name: 'Polo Shirt', imgUrl: 'https://images.sportsdirect.com/images/products/54202501_l.jpg', styleNum: 'MS13KT1906', color: 'blue', size: 'S', quantity: 1, price: 11.00 },
+    {id: 2, name: 'Graphic Shirt', imgUrl: 'https://cdn.shopify.com/s/files/1/2250/2843/products/mockup-d28bd8b0_grande.jpg', styleNum: 'MS13KT1906', color: 'pink', size: 'S', quantity: 1, price: 17.00 },
+    {id: 3, name: 'V-Neck', imgUrl: 'https://shirtsofcotton.com/en/media/catalog/product/cache/10/image/1200x1200/9df78eab33525d08d6e5fb8d27136e95/s/h/shirtsofcotton-t-shirt-soc-12-front-1200px.jpg', styleNum: 'MS13KT1906', color: 'blue', size: 'S', quantity: 1, price: 21.00 },
+    {id: 4, name: 'Tank Top', imgUrl: 'http://cdn.shopify.com/s/files/1/1347/4217/products/BonJovi-MoonTank-Womens-Main_grande.jpg', styleNum: 'MS13KT1906', color: 'red', size: 'M', quantity: 1, price: 22.00 },
 ]
 
 const initialState = {

@@ -47,7 +47,7 @@ class Item extends Component {
                     <input type="text" maxLength="2" value={this.props.item.quantity}></input>
                 </td>
                 <td className="Item__price price_col">
-                    <p>{this.props.item.price}</p>
+                    <p>$ {this.props.item.price}</p>
                 </td>
                 
             </tr>

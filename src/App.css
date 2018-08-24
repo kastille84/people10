@@ -42,6 +42,10 @@
   padding-top: 25px;
 }
 
+.darken-background {
+  background-color: #444;
+}
+
 /* Utilities */
 .heading {
   color: #444;

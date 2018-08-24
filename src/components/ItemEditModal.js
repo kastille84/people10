@@ -45,8 +45,8 @@ class ItemEditModal extends Component {
                 <div className="ItemEdit__container">
                     <div className="ItemEdit__info">
                         <h4>{this.props.itemRedux.selectedItem.name}</h4>
-                        <h3>$ {this.props.itemRedux.selectedItem.price}</h3>
-                        <p>{this.props.itemRedux.selectedItem.styleNum}</p>
+                        <h2>$ {this.props.itemRedux.selectedItem.price}</h2>
+                        <p className="ItemEdit__styleNum">{this.props.itemRedux.selectedItem.styleNum}</p>
                         <p className="ItemEdit__control-color">
                             <span 
                                 className="ItemEdit__control-color--red" 

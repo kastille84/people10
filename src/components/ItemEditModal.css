@@ -52,6 +52,11 @@
     margin-bottom: 10px;
 }
 
+.ItemEdit__control-color,
+.ItemEdit__styleNum {
+    margin-bottom: 0;
+}
+
 .ItemEdit__control-color--red,
 .ItemEdit__control-color--green,
 .ItemEdit__control-color--blue
