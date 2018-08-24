@@ -9,8 +9,7 @@ class Item extends Component {
     removeItem = (e) => {
         e.preventDefault();
         this.props.onDeleteItem(this.props.item.id);
-
-        this.props.onSetSubtractItemPrice(this.props.item.price);
+        this.props.onSetSubtractItemPrice( (this.props.item.price * this.props.item.quantity));
     }
 
     editItem = (e) => {
@@ -63,6 +62,6 @@ const mapDispatchToProps = (dispatch) => {
 
         onSetSubtractItemPrice: (price) => dispatch(actions.setSubtractItemPrice(price))
     }
-}
+};
 
 export default connect(null, mapDispatchToProps)(Item);

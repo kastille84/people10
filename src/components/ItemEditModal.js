@@ -34,11 +34,21 @@ class ItemEditModal extends Component {
     onSubmitForm = (e) => {
         e.preventDefault();
         this.props.onSetEditSelectedItem(this.state);
+        //update subtotal
+        let subtotal = 0
+        this.props.itemRedux.items.forEach(item => {
+            subtotal = subtotal + (item.price * item.quantity)
+        });
+        
+        this.props.onSetSubtotalPrice(subtotal);
+
+
+        this.props.onSetEditItemMode(false);
     }
 
     render() {
         return (    
-            <div className={"ItemEdit " + (this.props.itemRedux.editItemMode ? 'showModal': '')}>
+            <div className={"ItemEdit " + (this.props.itemRedux.editItemMode ? 'showModal': 'hideModal')}>
                 <div className="ItemEdit__close">
                     <span onClick={this.onUnselectItemFunc}>x</span>
                 </div>
@@ -90,7 +100,8 @@ class ItemEditModal extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        itemRedux: state.itemRedux
+        itemRedux: state.itemRedux,
+        priceRedux: state.priceRedux
     }
 }
 
@@ -98,7 +109,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onSetSelectedItem: (bool) => dispatch(actions.setSelectedItem(bool)),
         onSetEditItemMode: (bool) => dispatch(actions.setEditItemMode(bool)),
-        onSetEditSelectedItem: (itemInfo) => dispatch(actions.setEditSelectedItem(itemInfo))
+        onSetEditSelectedItem: (itemInfo) => dispatch(actions.setEditSelectedItem(itemInfo)),
+        onSetSubtotalPrice: (subtotal) => dispatch(actions.setSubtotalPrice(subtotal))
     }
 }
 

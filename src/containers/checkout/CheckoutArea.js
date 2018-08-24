@@ -23,7 +23,7 @@ class CheckoutArea extends Component {
                     <div><p>ENTER PROMOTION CODE OR GIFT CARD</p></div>
                     <div>
                         <input />
-                        <button>APPLY</button>    
+                        <button className="btn">APPLY</button>    
                     </div>
                 </article>
                 <article className="Checkout__subtotal">
@@ -34,8 +34,8 @@ class CheckoutArea extends Component {
                         <small>You qualify for free shippingecause your order is over $50</small>                     
                     </div>
                     <div>
-                        <p>{this.props.priceRedux.subtotal}</p>
-                        <p>{this.props.priceRedux.promoCodeValue}</p>
+                        <p>$ {this.props.priceRedux.subtotal}</p>
+                        <p>$ {this.props.priceRedux.promoCodeValue}</p>
                         <p>FREE</p>
                     </div>
                 </article>
@@ -45,12 +45,12 @@ class CheckoutArea extends Component {
                         <small>Tax will be applied during checkout</small>
                     </div>
                     <div>
-                        <p>{this.props.priceRedux.subtotal - this.props.priceRedux.promoCodeValue}</p>
+                        <p>$ {this.props.priceRedux.subtotal - this.props.priceRedux.promoCodeValue}</p>
                     </div>
                 </article>
-                <article className="checkout">
+                <article className="checkout-cta">
                     <a>Continue Shopping</a>
-                    <button>CHECKOUT</button>
+                    <button className="btn btn-primary">CHECKOUT</button>
                     <p>Secure checkout. Shopping is always safe & secure</p>
                 </article>
             </div>

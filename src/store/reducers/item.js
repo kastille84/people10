@@ -34,20 +34,21 @@ const reducer = (state=initialState, action) => {
                 selectedItem: action.item
             }
         case (actionTypes.SET_EDIT_SELECTED_ITEM):
-        
+            let set_edit_selected_item_arr = state.items.slice();
+            set_edit_selected_item_arr = set_edit_selected_item_arr.map(item => {
+                if (item.id === action.editInfo.id ) {
+                    item.color = action.editInfo.color;
+                    item.size = action.editInfo.size;
+                    item.quantity = action.editInfo.quantity;
+                    return {...item};
+                } else {
+                    return item;
+                }
+            });            
             return {
                 ...state,
-                items: state.items.map(item => {
-                    if (item.id === action.editInfo.id ) {
-                        item.color = action.editInfo.color;
-                        item.size = action.editInfo.size;
-                        item.quantity = action.editInfo.quantity;
-                        return item;
-                    } else {
-                        return item;
-                    }
-                })
-            }
+                items: set_edit_selected_item_arr
+            };
         default:
             return state; 
     }
